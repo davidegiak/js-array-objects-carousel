@@ -26,7 +26,6 @@ let slides = [
     }
 ]
 let nSlides = slides.length;
-let slideSelected = slides[0];
 
 document.querySelector(".nxt").addEventListener("click", function () {
     for (let i = 0; i < nSlides; i++) {
@@ -35,7 +34,11 @@ document.querySelector(".nxt").addEventListener("click", function () {
         let card = document.querySelector(".card");
         if (slideSelected) {
             card.classList.add("active");
-            card.classList.remove("none")
+            card.classList.remove("none");
+        }
+        else {
+            card.classList.remove("active");
+            card.classList.add("none")
         }
         
     }
