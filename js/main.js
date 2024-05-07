@@ -36,9 +36,10 @@ document.querySelector(".nxt").addEventListener("click", function () {
             card.classList.add("active");
             card.classList.remove("none");
         }
-        else {
+        else if (card.classList.contains("active")) {
             card.classList.remove("active");
             card.classList.add("none")
+            i++
         }
         
     }
