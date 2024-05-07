@@ -1,6 +1,6 @@
 function cards(foto,titolo,descrizione ) {
     return `
-    <div class="card active">
+    <div class="card none">
         <img class="img" src="img/${foto}" alt="">
         <div class="description">
             <h1>${titolo}</h1>

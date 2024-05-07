@@ -27,17 +27,25 @@ let slides = [
 ]
 let nSlides = slides.length;
 let slideSelected = slides[0];
-for (let i = 0; i < 1; i++) {
-    slideSelected = slides[i];
-    document.querySelector(".container").innerHTML += cards(slideSelected.foto, slideSelected.titolo, slideSelected.descrizione)
-    
-}
 
 document.querySelector(".nxt").addEventListener("click", function () {
-    for (let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < nSlides; i++) {
         slideSelected = slides[i];
-        if (slideSelected.classList.contains("active")){
-            slideSelected.classList.remove("active")
+        document.querySelector(".container").innerHTML += cards(slideSelected.foto, slideSelected.titolo, slideSelected.descrizione);
+        let card = document.querySelector(".card");
+        if (slideSelected) {
+            card.classList.add("active");
+            card.classList.remove("none")
         }
+        
     }
 })
+
+// document.querySelector(".nxt").addEventListener("click", function () {
+//     for (let i = 0; i < slides.length; i++) {
+//         slideSelected = slides[i];
+//         if (slideSelected.classList.contains("active")){
+//             slideSelected.classList.remove("active")
+//         }
+//     }
+// })
