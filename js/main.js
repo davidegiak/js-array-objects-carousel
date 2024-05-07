@@ -25,9 +25,19 @@ let slides = [
         descrizione: "Ulkckckckck"
     }
 ]
-
-for (let i = 0; i < slides.length; i++) {
-    const element = slides[i];
-    document.querySelector("body").innerHTML += cards(element.foto, element.titolo, element.descrizione)
+let nSlides = slides.length;
+let slideSelected = slides[0];
+for (let i = 0; i < 1; i++) {
+    slideSelected = slides[i];
+    document.querySelector(".container").innerHTML += cards(slideSelected.foto, slideSelected.titolo, slideSelected.descrizione)
     
 }
+
+document.querySelector(".nxt").addEventListener("click", function () {
+    for (let i = 0; i < slides.length; i++) {
+        slideSelected = slides[i];
+        if (slideSelected.classList.contains("active")){
+            slideSelected.classList.remove("active")
+        }
+    }
+})

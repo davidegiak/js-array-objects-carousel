@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.card{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.none {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.img {
+    width: 50%;
+    
+    
+}
