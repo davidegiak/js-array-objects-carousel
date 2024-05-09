@@ -35,6 +35,10 @@ let creazione = document.querySelector(".container");
 
 //***********************************************************CREO LA PRIMA CARD */
 creazione.innerHTML += card(attiva.foto, attiva.titolo, attiva.descrizione);
+for (let i = 0; i < nSlides; i++) {
+    attiva = slides[i];
+    creazione.innerHTML += tumb(attiva.foto, attiva.titolo, attiva.descrizione);
+}
 
 //*************************************************************EVENTO SUL CLICK IN AVANTI*/
 document.querySelector(".nxt").addEventListener("click", function () {

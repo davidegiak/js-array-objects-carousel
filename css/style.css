@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+html {
+    background-color: #222;
 }
 
 .container{
@@ -14,6 +21,7 @@
 
 .card{
     width: 80%;
+    height: 574px;
     margin: 0 auto;
 }
 
@@ -24,9 +32,29 @@
 .active {
     display: block;
 }
-
+.img-cont{
+    width: 100%;
+    height: 100%;
+}
 .img {
-    width: 50%;
-    
-    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btns{
+    text-align: center;
+    line-height: 10rem;
+    vertical-align: baseline;
+}
+
+.tumb {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-cont-tumb {
+    width: calc(100% / 5);
 }
